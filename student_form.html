@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+       <title>form elements</title>
+       <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  fieldset {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  input[type="text"][readonly] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+  }
+  
+  select {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  input[type="hidden"] {
+    display: none;
+  }
+  
+       </style>
+</head>
+<body>
+
+<form method="post" action="./table.html" target="_blank">
+    <fieldset>
+        <legend>STUDENT FORM</legend>
+    <table>
+    <tr>
+        <td><label for="one">Name:</label></td>
+        <td><input type="text"  name="sname" id="one" placeholder="Enter name" required ></td>
+    </tr>
+    <tr>
+        <td><label for="two">Roll No:</label></td>
+        <td><input type="number" id="two" placeholder="Enter roll number" required ></td>
+    </tr>
+    <tr>
+        <td for="three">DOB:</td>
+        <td><input type="date" name="db" id="three"></td>
+    </tr>
+    <tr>
+        <td>EMAIL:</td>
+        <td><input type="email" name="semail" required></td>
+    </tr>
+    <tr>
+        <td>PASSWORD:</td>
+        <td><input type="password" name="spass" required></td>
+    </tr>
+    <tr>
+        <td>UPLOAD FILES:</td>
+        <td><input type="file" name="sfiles" multiple required></td>
+    </tr>
+    <tr>
+        <tr>
+            <td>SELECT YEAR:</td>
+            <td><select name="y" id="y" required>
+                <option value="1">first year</option>
+                <option value="2">second year</option>
+                <option value="3">third year</option>
+    
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td>SELECT COURSES:</td>
+            <td>
+               <input type="checkbox" name="COURSES" value="h" id="h"><label for="h">HTML</label>
+               <input type="checkbox" name="COURSES" value="C" id="C"><label for="C">CSS</label>
+               <input type="checkbox" name="COURSES" value="P" id="P"><label for="P">PYTHON</label>
+               <input type="checkbox" name="COURSES" value="J" id="J"><label for="J">JS</label>
+            </td>
+        </tr>
+        <tr>
+            <td>GENDER:</td>
+            <td><input type="radio" name="gender" value="male" id="m"><label for="m">MALE</label>
+            <input type="radio" name="gender" value="female" id="f"><label for="f">FEMALE</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>USER ID:</td>
+            <td><input type="text" name="UID" id="U1" value="USR001" readonly></td>
+        </tr>
+
+        <tr>
+            <td>ID(hidden)</td>
+            <td><input type="hidden" name="UID" id="U1" value="USR001" readonly></td>
+        </tr>
+
+        
+
+
+
+        <td><input type="submit" name="send" required></td>
+    </tr>
+    
+</table>
+</fieldset>
+</form>
+</body>
+</html>
+
